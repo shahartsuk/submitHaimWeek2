@@ -22,6 +22,7 @@ void printNumOfChar()
 	char ch;
 	if (!f)
 	{
+		printf("allocation error f1");
 		exit(1);
 	}
 	ch = fgetc(f);
@@ -41,6 +42,7 @@ void printOfAsterisk()
 	char ch=0;
 	if (!f)
 	{
+		printf("allocation error f2");
 		exit(1);
 	}
 	while (ch != EOF)
@@ -62,6 +64,7 @@ void printTheFile()
 	char ch = 0;
 	if (!f)
 	{
+		printf("allocation error f3");
 		exit(1);
 	}
 	while (ch != EOF)
@@ -82,6 +85,11 @@ void memoryAllocation()
 	int memoryAllocationCount = 0;
 	FILE* f;
 	f = fopen("C:\\Users\\shaha\\source\\repos\\homework.week2.d2\\HW2_3.txt", "r");
+	if (!f)
+	{
+		printf("allocation error f4");
+		exit(1);
+	}
 	char chNum = 0;
 	char chLetter = 0;
 	int* ptrInt;
@@ -102,7 +110,17 @@ void memoryAllocation()
 		}
 	}
 	intArray = malloc(sizeof(int) * counterI);
+	if (!intArray)
+	{
+		printf("allocation error intArray");
+		exit(1);
+	}
 	charArray = malloc(sizeof(char) * counterC);
+	if (!charArray)
+	{
+		printf("allocation error charArray");
+		exit(1);
+	}
 	ptrInt = intArray;
 	ptrChar = charArray;
 	for (int i = 0; i < counterI; i++)

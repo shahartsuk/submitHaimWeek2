@@ -1,0 +1,4 @@
+﻿  homework.week2.d2.c
+C:\Users\shaha\source\repos\homework.week2.d2\homework.week2.d2\homework.week2.d2.c(117,10): warning C4477: 'scanf' : format string '%d' requires an argument of type 'int *', but variadic argument 1 has type 'char *'
+C:\Users\shaha\source\repos\homework.week2.d2\homework.week2.d2\homework.week2.d2.c(117,10): message : consider using '%hhd' in the format string
+  homework.week2.d2.vcxproj -> C:\Users\shaha\source\repos\homework.week2.d2\x64\Debug\.week2.d2.exe
